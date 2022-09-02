@@ -1,0 +1,54 @@
+.activity-container {
+    width: 100%;
+    max-width: 120rem;
+    text-align: left;
+
+}
+
+.activity-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.activity-content {
+width: 80%;
+
+}
+.activity-content-title {
+    background: #18733A;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem 0rem;
+    font-weight: 600;
+}
+
+.activity-content-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.activity-content h3 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+.activity-content-description {
+
+    background-color: #F6FBF9;
+
+}
+
+.activity-content-description-txt {
+
+}
+.activity-details {
+    background-color: #F6FBF9;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    padding: 1.5rem;
+}
+.activity-details h4 {
+    margin-top: 1rem;
+}
