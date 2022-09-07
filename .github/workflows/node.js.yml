@@ -24,13 +24,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Install & check dependencies/Lint files/Run test
-      run: |
-        npm install --dev
+      run: npm install --dev
+    - name: check dependencies
+      run: npm audit
+    - name: Lint files
+      run: npm run lint
+    - name: Test
+      run: npm test
+      
    
-        npm audit    
-   
-        npm run lint    
-   
-        npm test
-        
 
