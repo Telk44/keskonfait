@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
     - name: Install & check dependencies/Lint files/Run test
       run: |
-        npm install
+        npm install --dev
    
         npm audit    
    
