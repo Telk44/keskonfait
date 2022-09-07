@@ -25,21 +25,21 @@ module.exports = {
             password: {
                 type: Sequelize.STRING
             },
-            isAdmin: {
-                type: Sequelize.BOOL,
-                defaultValue: true
-            },
-            isVerified: {
-                type: Sequelize.BOOL,
-                defaultValue: true
-            },
-            token: {
-                type: Sequelize.STRING
-            },
-            active: {
-                type: Sequelize.INT,
-                defaultValue: 0
-            },
+            // isAdmin: {
+            //     type: Sequelize.BOOL,
+            //     defaultValue: true
+            // },
+            // isVerified: {
+            //     type: Sequelize.BOOL,
+            //     defaultValue: true
+            // },
+            // token: {
+            //     type: Sequelize.STRING
+            // },
+            // active: {
+            //     type: Sequelize.INT,
+            //     defaultValue: 0
+            // },
             createdAt: {
                 // allowNull: false,
                 type: Sequelize.DATE

@@ -9,10 +9,10 @@ module.exports = {
       userName: "Admin",
       email:"test@test.fr",
       password: '1fevrier2002?',
-      isAdmin: true,
-      isVerified: true,
-      token: "",
-      active: 1,
+      // isAdmin: true,
+      // isVerified: true,
+      // token: "",
+      // active: 1,
       createdAt:"2022-01-17 04:33:12",
       updatedAt:"2022-01-18 04:33:12"
     }]);

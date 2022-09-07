@@ -2,24 +2,24 @@ const express = require('express');
 // const bodyParser = require('body-parser');
 const path = require('path');
 const helmet = require('helmet');
-const {sequelize} = require('./models');
+const {sequelize, User} = require('./models');
 const userRoutes = require("./routes/user");
 const activityRoutes = require("./routes/activity");
 const ageRoutes = require("./routes/age");
 const categoryRoutes = require("./routes/category");
 const cors = require('cors')
 
-sequelize
-    .authenticate()
-    .then(() => {
-        console.log('connexion à la bdd ok');
-        sequelize.sync({  //synchronisation à la bdd
-            // force:true
-        })
-    })
-    .catch(error => {
-        console.log(error);
-    });
+// sequelize
+//     .authenticate()
+//     .then(() => {
+//         // console.log('connexion à la bdd ok');
+//         sequelize.sync({  //synchronisation à la bdd
+//             // force:true
+//         })
+//     })
+//     .catch(error => {
+//         console.log(error);
+//     });
 
 const rateLimit = require('express-rate-limit')
 const limiter = rateLimit({
@@ -46,12 +46,11 @@ app.use('/activity', activityRoutes);
 app.use('/age', ageRoutes);
 app.use('/category', categoryRoutes);
 
-//static Images Folder
 //rendre les images accessibles publiquement pour toutes les requêtes vers la route /images
 app.use('/images', express.static( 'images'));
 
 //securise les en-têtes HTTP//
-app.use(helmet());
+// app.use(helmet());
 
 // limite de 40 requêtes toutes les 10 minutes effective sur toutes les routes //
 app.use(limiter);

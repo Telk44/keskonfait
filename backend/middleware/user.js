@@ -25,11 +25,11 @@ module.exports = (req, res, next) => {
     // }
 
     // password min 8 chars
-    if (!req.body.password || req.body.password.length < 8) {
-        return res.status(400).send({
-            msg: "Please enter a password with min. 8 chars",
-        });
-    }
+    // if (!req.body.password || req.body.password.length < 8) {
+    //     return res.status(400).send({
+    //         msg: "Please enter a password with min. 8 chars",
+    //     });
+    // }
     next();
 
 }

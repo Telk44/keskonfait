@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
     userName: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    isAdmin: DataTypes.BOOLEAN,
-    isVerified: DataTypes.BOOLEAN,
-    token: DataTypes.STRING,
-    active: DataTypes.INTEGER
+    // isAdmin: DataTypes.BOOLEAN,
+    // isVerified: DataTypes.BOOLEAN,
+    // token: DataTypes.STRING,
+    // active: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',

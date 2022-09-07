@@ -48,7 +48,7 @@ exports.createActivity = (req, res, next) => {
 }
 
 
-//Liste de toutes les activités(test ok)
+//Liste de toutes les activités non connecté (test ok)
 
 exports.findAllActivities = (req, res, next) => {
     Activity.findAll({
@@ -119,7 +119,6 @@ exports.getUserActivity = (req, res, next) => {
     )
         .then(activity => res.status(200).json(formatSqlToJsonresponse(activity)))
         .catch(error => res.status(500).json({error}))
-
 }
 
 

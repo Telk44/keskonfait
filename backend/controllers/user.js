@@ -26,8 +26,8 @@ exports.signup = (req, res) => {
                         lastName: req.body.lastName,
                         firstName: req.body.firstName,
                         userName: req.body.userName,
-                        isAdmin: req.body.isAdmin,
-                        isVerified: req.body.isVerified,
+                        // isAdmin: req.body.isAdmin,
+                        // isVerified: req.body.isVerified,
                             // token: jwt.sign(
                             //     { email: req.body.email },
                             //     'process.env.DB_TOKEN',

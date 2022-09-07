@@ -7,17 +7,17 @@
     "dialect": "mariadb"
   },
   "test": {
-    "username": "root",
+    "username": "kristell",
     "password": null,
-    "database": "database_test",
+    "database": "keskonfait-dev",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mariadb"
   },
   "production": {
-    "username": "root",
+    "username": "kristell",
     "password": null,
-    "database": "database_production",
+    "database": "keskonfait_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mariadb"
   }
 }

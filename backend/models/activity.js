@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
             Activity.Age = Activity.belongsTo(models.Age, {
                 foreignKey:"ageId"
             });
-
         }
     }
     Activity.init({
