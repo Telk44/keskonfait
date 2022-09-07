@@ -1,4 +1,4 @@
-name: Node.js CI
+name:  CI
 
 on:
   push:
@@ -23,35 +23,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Install dependencies 
+    - name: Install & check dependencies/Lint files/Run test
       run: |
         npm install
-    - name: Check dependencies 
-      run: |
+   
         npm audit    
-    - name: Lint files
-      run: |
+   
         npm run lint    
-    - name: Test app
-    - run: |
+   
         npm test
         
-  lint:
 
-    runs-on: ubuntu-latest
-   
-    steps:
-    - uses: actions/checkout@v3
-    - name: Lint files
-      run: |
-        npm run lint    
-    
-  test:
-
-    runs-on: ubuntu-latest
-  
-    steps:
-    - uses: actions/checkout@v3
-    - name: Test app
-    - run: |
-        npm test
