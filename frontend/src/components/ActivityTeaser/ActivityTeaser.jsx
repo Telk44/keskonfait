@@ -1,11 +1,10 @@
-// import lego from "../../assets/lego.jpg"
 import "./ActivityTeaser.css"
 import {Link} from "react-router-dom";
 
 function ActivityTeaser({activity}) {
     return (
         <>
-            <Link to={`/activity/${activity.id}`} className="activityTeaser Teaser">
+            <Link to={`/activity/one/${activity.id}`} className="activityTeaser Teaser">
                 <div className="activityTeaser-type Type ">
                     {activity.category}
                 </div>

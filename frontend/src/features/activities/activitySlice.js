@@ -68,6 +68,21 @@ export const getAllActivities = createAsyncThunk(' activities /all ', async (_, 
     }
 })
 
+//get one activity
+
+// export const getOneActivity = createAsyncThunk(' activities /one ', async (activityId, thunkAPI) => {
+//     try {
+//
+//         return await activityService.getOneActivity(activityId)
+//
+//     } catch (error) {
+//         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
+//
+//         return thunkAPI.rejectWithValue(message)
+//     }
+// })
+
+
 
 export const activitySlice = createSlice({
     name: 'activity',
@@ -128,6 +143,19 @@ export const activitySlice = createSlice({
                 state.isError = true
                 state.message = action.payload
             })
+            // .addCase(getOneActivity.pending, (state) => {
+            //     state.isLoading = true
+            // })
+            // .addCase(getOneActivity.fulfilled, (state, action) => {
+            //     state.isLoading = false
+            //     state.isSuccess = true
+            //     state.activities = action.payload
+            // })
+            // .addCase(getOneActivity.rejected, (state, action) => {
+            //     state.isLoading = false
+            //     state.isError = true
+            //     state.message = action.payload
+            // })
     }
 
 })

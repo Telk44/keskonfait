@@ -29,7 +29,6 @@ export default function Activities() {
         return <Spinner/>
     }
 
-
     return (
 
         <>

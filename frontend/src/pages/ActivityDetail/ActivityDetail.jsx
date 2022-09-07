@@ -1,19 +1,15 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {toast} from 'react-toastify'
 import {useSelector, useDispatch} from "react-redux"
-import {getActivity, reset} from '../../features/activities/activitySlice'
+import {getOneActivity} from '../../features/activities/activitySlice'
 import {useParams} from "react-router-dom"
 import BackButton from "../../components/BackButton"
 import Spinner from "../../components/Spinner"
-// import lego from "../../assets/lego.jpg"
-import './Activity.css'
-import ActivityItem from "../../components/ActivityItem";
+import '../Activity/Activity.css'
 
+function ActivityDetail() {
+    const {activity, isLoading, isError, message} = useSelector((state) => state.activities)
 
-function Activity() {
-    const {activity, isLoading, isSuccess, isError, message} = useSelector((state) => state.activities)
-
-    const params = useParams()
     const dispatch = useDispatch()
     const {activityId} = useParams() //activityId from the url
     console.log(activityId, "activityId")
@@ -22,7 +18,7 @@ function Activity() {
         if (isError) {
             toast.error(message)
         }
-        dispatch(getActivity(activityId))
+        dispatch(getOneActivity(activityId))
     }, [isError, message, activityId]);
 
     if (isLoading) {
@@ -30,7 +26,7 @@ function Activity() {
     }
 
     if (isError) {
-        return <h3>Quelque chose s'est mal passée</h3>
+        return <h3>Quelque chose s'est mal passé</h3>
     }
 
 
@@ -76,9 +72,9 @@ function Activity() {
 
 
             </div>
-            <BackButton url='/activities'/>
+            <BackButton url='/'/>
         </>
     )
 }
 
-export default Activity
+export default ActivityDetail

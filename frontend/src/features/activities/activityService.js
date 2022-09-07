@@ -70,14 +70,14 @@ const getActivity = async (activityId, token) => {
 
 //Get all activities
 const API_URL_GET_ALL = '/activity/'
-const getAllActivities = async (token) => {
+const getAllActivities = async () => {
 
     const requestOptions = {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            // 'Authorization': `Bearer ${token}`
         }
     };
 
@@ -87,11 +87,32 @@ const getAllActivities = async (token) => {
     return data;
 }
 
+//Get One activity for all users
+// const API_URL_GET_ONE = '/activity/one/'
+// const getOneActivity = async (activityId) => {
+//
+//     const requestOptions = {
+//         method: 'GET',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json',
+//             // 'Authorization': `Bearer ${token}`
+//         }
+//     };
+//
+//     const response = await fetch(API_URL_GET_ONE + activityId, requestOptions)
+//     const data = await response.json();
+//     console.log("one activity" , data )
+//
+//     return data;
+// }
+
 const activityService = {
     createActivity,
     getActivities,
     getActivity,
-    getAllActivities
+    getAllActivities,
+    // getOneActivity
 }
 
 export default activityService

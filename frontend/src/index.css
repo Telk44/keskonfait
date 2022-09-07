@@ -75,6 +75,26 @@ h3 {
     margin-right: 5px;
 }
 
+.footer {
+    padding: 20px 20px;
+    border-top: 1px solid #18733A    ;
+    margin-top: 60px;
+    background-color: #F6FBF9;
+}
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer ul li {
+    padding: 20px;
+}
+.footer ul li a:hover {
+    color: #777;
+
+}
+
 .heading {
     font-size: 2rem;
     font-weight: 700;

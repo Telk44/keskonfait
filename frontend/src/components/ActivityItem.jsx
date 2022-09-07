@@ -11,7 +11,6 @@ function ActivityItem({activity}) {
             <Link to={`/activity/${activity.id}`} className='btn btn-reverse btn-sm'>Voir</Link>
             <Link to={`/activity/${activity.id}`} ><FaPencilAlt /></Link>
             <Link to={`/activity/${activity.id}`} ><FaTrashAlt /></Link>
-
         </div>
     )
 }
