@@ -26,6 +26,7 @@ jobs:
         cache: 'npm'
      
     - run: npm install --dev
+    - run: npm audit
     - run: npm run lint
     - run: npm test
    
