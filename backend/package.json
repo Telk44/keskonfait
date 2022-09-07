@@ -6,7 +6,8 @@
   "scripts": {
     "migrate:up": "npx sequelize-cli db:migrate",
     "migrate:undo": "npx sequelize-cli db:migrate:undo",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "author": "Kristell Lansonneur",
   "license": "ISC",
