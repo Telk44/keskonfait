@@ -35,3 +35,23 @@ jobs:
     - name: Test app
     - run: |
         npm test
+        
+  lint:
+
+    runs-on: ubuntu-latest
+   
+    steps:
+    - uses: actions/checkout@v3
+    - name: Lint files
+      run: |
+        npm run lint    
+    
+  test:
+
+    runs-on: ubuntu-latest
+  
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test app
+    - run: |
+        npm test
