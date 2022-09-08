@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "kristell",
-    "password": null,
+    "password": "kristell",
     "database": "keskonfait-dev",
     "host": "127.0.0.1",
     "dialect": "mariadb"
   },
   "test": {
     "username": "kristell",
-    "password": null,
+    "password": "kristell",
     "database": "keskonfait-dev",
     "host": "127.0.0.1",
     "dialect": "mariadb"
