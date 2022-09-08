@@ -27,7 +27,13 @@ jobs:
     
     - run: |
         cd backend
-        npm ci
+        npm install --dev
+    - run: |
+        cd backend
         npm audit
+    - run: |
+        cd backend
         npm run lint
+    - run: |
+        cd backend   
         npm test
