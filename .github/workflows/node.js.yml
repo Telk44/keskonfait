@@ -26,7 +26,7 @@ jobs:
         cache: 'npm'
     
     - run: |
-        echo "$HOME/backend" 
+        echo "/backend" 
         npm ci
     - run: npm audit
     - run: npm run lint
