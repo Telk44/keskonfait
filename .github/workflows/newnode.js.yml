@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,10 +29,8 @@ jobs:
         npm install --save-dev
         npm audit
         npm run lint 
- 
    
   test:
-  
     runs-on: ubuntu-latest
 
     strategy:
