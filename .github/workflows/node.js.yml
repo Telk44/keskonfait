@@ -70,10 +70,9 @@ jobs:
     - uses: ankane/setup-mariadb@v1
       with:
         mariadb-version: 10.8
-        database: testdb
-    - run: mysql -D testdb -e 'SELECT VERSION()'
+        database: database-dev
+    - run: mysql -D database-dev -e 'SELECT VERSION()'
     - run: |
         cd backend 
         npm install --save-dev || exit 0
-        npx sequelize-cli db:migrate
         npm test
