@@ -84,5 +84,5 @@ jobs:
     - run: |
         cd backend 
         npm install --save-dev || exit 0
-        npm migrate:up
+        npx sequelize-cli db:migrate
         npm test
