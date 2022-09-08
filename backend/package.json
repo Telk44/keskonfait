@@ -6,7 +6,7 @@
   "scripts": {
     "migrate:up": "npx sequelize-cli db:migrate",
     "migrate:undo": "npx sequelize-cli db:migrate:undo",
-    "test": "jest",
+    "test": "NODE_ENV=test jest --runInBand",
     "lint": "eslint --max-warnings 50 . || exit 0"
   },
   "author": "Kristell Lansonneur",
