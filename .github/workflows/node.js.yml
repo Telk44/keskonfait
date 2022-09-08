@@ -60,21 +60,24 @@ jobs:
       matrix:
         node-version: [12.x, 14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        mariadb-version: [10.8, 10.7, 10.6, 10.5, 10.4, 10.3]
     steps:
-    - uses: ankane/setup-mariadb@v1
-      with:
-        mariadb-version: ${{ matrix.mariadb-version }}
-    
     - uses: actions/checkout@v3
-
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-       
-
+    - uses: getong/mariadb-action@v1.1
+      with:
+        host port: 3306 # Optional, default value is 3306. The port of host
+        container port: 3306 # Optional, default value is 3306. The port of container
+        character set server: 'utf8' # Optional, default value is 'utf8mb4'. The '--character-set-server' option for mysqld
+        collation server: 'utf8_general_ci' # Optional, default value is 'utf8mb4_general_ci'. The '--collation-server' option for mysqld
+        mariadb version: '10.4.10' # Optional, default value is "latest". The version of the MariaDB
+        mysql database: 'keskonfait-dev' # Optional, default value is "test". The specified database which will be create
+        mysql root password: '' # Required if "mysql user" is empty, default is empty. The root superuser password
+        mysql user: 'kristell' # Required if "mysql root password" is empty, default is empty. The superuser for the specified database. Can use secrets, too
+        mysql password: 'kristell' # Required if "mysql user" exists. The password for the "mysql user" 
   
     - run: |
         cd backend 
