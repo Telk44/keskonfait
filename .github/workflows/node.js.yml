@@ -49,6 +49,7 @@ jobs:
         cache: 'npm'
     - run: |
         cd backend
+        npm ci
         npm run lint
    
   test:
@@ -70,5 +71,6 @@ jobs:
         cache: 'npm'
    
     - run: |
-        cd backend   
+        cd backend 
+        npm ci
         npm test
