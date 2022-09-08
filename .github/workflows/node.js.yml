@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,7 +25,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - run: cd backend
+      
+    - name: ci keskonfait
+      uses: actions/keskonfait/backend@v3
     - run: npm install --dev
     - run: npm audit
     - run: npm run lint
