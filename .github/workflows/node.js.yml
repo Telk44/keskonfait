@@ -71,7 +71,7 @@ jobs:
       with:
         mariadb-version: 10.8
         database: database-dev
-    - run: mysql -D database-dev -e 'SELECT VERSION()'
+    - run: mysql -D database-dev -e 'SELECT DATABASE()'
     - run: |
         cd backend 
         npm install --save-dev || exit 0
