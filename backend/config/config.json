@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "kristell",
-    "password": 'kristell',
+    "password": "kristell",
     "database": "keskonfait-dev",
     "host": "127.0.0.1",
     "dialect": "mariadb"

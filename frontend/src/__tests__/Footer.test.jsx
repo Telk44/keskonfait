@@ -10,4 +10,5 @@ test('check if contact exist', () => {
     )
     const linkElement = screen.getByText('Contact')
     expect(linkElement).toBeInTheDocument()
+
 })
