@@ -27,7 +27,7 @@ jobs:
     
     - run: |
         cd backend
-        npm ci
+        npm install --save-dev
         
         
   lint:
@@ -49,7 +49,7 @@ jobs:
         cache: 'npm'
     - run: |
         cd backend
-        npm ci
+        npm install --save-dev
         npm run lint 
    
   test:
@@ -72,5 +72,5 @@ jobs:
    
     - run: |
         cd backend 
-        npm ci
+        npm install --save-dev
         npm test
