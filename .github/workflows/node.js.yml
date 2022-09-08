@@ -28,9 +28,7 @@ jobs:
     - run: |
         cd backend
         npm install --dev
-    - run: |
-        cd backend
-        npm audit
+    
     - run: |
         cd backend
         npm run lint
