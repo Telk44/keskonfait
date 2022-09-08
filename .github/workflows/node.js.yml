@@ -28,6 +28,6 @@ jobs:
     - run: |
         cd backend
         npm ci
-    - run: npm audit
-    - run: npm run lint
-    - run: npm test
+        npm audit
+        npm run lint
+        npm test
