@@ -25,7 +25,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - run: npm ci
+    - run: |
+        echo "$HOME/backend" 
+        npm ci
     - run: npm audit
     - run: npm run lint
     - run: npm test
