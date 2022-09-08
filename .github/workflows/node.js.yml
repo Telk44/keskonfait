@@ -71,6 +71,7 @@ jobs:
       with:
         mariadb-version: 10.8
         database: database-dev
+        mysql username password: kristell
       
     - run: mysql -D database-dev -e 'SELECT DATABASE()'
     - run: |
