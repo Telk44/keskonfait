@@ -9,17 +9,17 @@ const ageRoutes = require("./routes/age");
 const categoryRoutes = require("./routes/category");
 const cors = require('cors')
 
-// sequelize
-//     .authenticate()
-//     .then(() => {
-//         // console.log('connexion à la bdd ok');
-//         sequelize.sync({  //synchronisation à la bdd
-//             // force:true
-//         })
-//     })
-//     .catch(error => {
-//         console.log(error);
-//     });
+sequelize
+    .authenticate()
+    .then(() => {
+        // console.log('connexion à la bdd ok');
+        sequelize.sync({  //synchronisation à la bdd
+            // force:true
+        })
+    })
+    .catch(error => {
+        console.log(error);
+    });
 
 const rateLimit = require('express-rate-limit')
 const limiter = rateLimit({
