@@ -24,8 +24,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-    - run: npm install --dev
-    - run: npm audit
-    - run: npm run lint
-    - run: npm test
+    
+    - run: |
+        cd backend
+        npm install --dev
+    
+    - run: |
+        cd backend
+        npm run lint
+    - run: |
+        cd backend   
+        npm test
