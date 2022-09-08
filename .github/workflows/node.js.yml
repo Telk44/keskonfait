@@ -24,11 +24,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-
-      
-    - name: ci keskonfait
-      uses: actions/keskonfait/backend@v3
-    - run: npm install --dev
+    
+    - run: npm ci
     - run: npm audit
     - run: npm run lint
     - run: npm test
