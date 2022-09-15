@@ -44,9 +44,9 @@ export const getActivities = createAsyncThunk(' activities /getAll ', async (_, 
 //Get user activity
 export const getActivity = createAsyncThunk(' activities /get', async (activityId, thunkAPI) => {
     try {
-        const token = thunkAPI.getState().auth.user.token
+        // const token = thunkAPI.getState().auth.user.token
 
-        return await activityService.getActivity(activityId, token )
+        return await activityService.getActivity(activityId )
 
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
@@ -68,19 +68,6 @@ export const getAllActivities = createAsyncThunk(' activities /all ', async (_, 
     }
 })
 
-//get one activity
-
-// export const getOneActivity = createAsyncThunk(' activities /one ', async (activityId, thunkAPI) => {
-//     try {
-//
-//         return await activityService.getOneActivity(activityId)
-//
-//     } catch (error) {
-//         const message = (error.response && error.response.data && error.response.data.message) || error.message || error.toString()
-//
-//         return thunkAPI.rejectWithValue(message)
-//     }
-// })
 
 
 
@@ -143,19 +130,6 @@ export const activitySlice = createSlice({
                 state.isError = true
                 state.message = action.payload
             })
-            // .addCase(getOneActivity.pending, (state) => {
-            //     state.isLoading = true
-            // })
-            // .addCase(getOneActivity.fulfilled, (state, action) => {
-            //     state.isLoading = false
-            //     state.isSuccess = true
-            //     state.activities = action.payload
-            // })
-            // .addCase(getOneActivity.rejected, (state, action) => {
-            //     state.isLoading = false
-            //     state.isError = true
-            //     state.message = action.payload
-            // })
     }
 
 })

@@ -3,9 +3,9 @@
     margin: 1px;
 }
 
-.Teaser:hover {
-    background-color:#ff6000;
-}
+/*.Teaser:hover {*/
+/*    background-color:#ff6000;*/
+/*}*/
 
 .activityTeaser-type {
     position: absolute;
@@ -33,7 +33,7 @@
 }
 .activityTeaser:hover .activityTeaser-content-wrapper {
         background-size: 100% 100%, 100% 100%;
-        padding-top: 2rem;
+        padding-top: 0rem;
         padding-bottom: 3rem;
     }
 
@@ -46,7 +46,7 @@
     position: relative;
     z-index: 1;
     height: 100%;
-    max-height: 28rem;
+    max-height: 20rem;
 }
 
 .activityTeaser-content {
@@ -65,7 +65,7 @@
 .activityTeaser-content-wrapper {
     position: relative;
     color: white;
-    padding: 3rem 1rem 1rem;
+    padding: 1rem 1rem 1rem;
     background-image: linear-gradient(to top,rgba(24,115,58) 0,rgba(24,115,58) 100%),linear-gradient(to top,rgba(0,0,0,.6) 60%,rgba(0,0,0,0) 100%),
     linear-gradient(to top, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0) 100%);;
     background-size: 100% 0,100% 100%;

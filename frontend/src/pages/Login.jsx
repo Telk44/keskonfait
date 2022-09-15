@@ -57,7 +57,7 @@ export default function Login() {
         <>
             <section className="heading">
                 <h1>
-                    <FaSignInAlt/> Login
+                    <FaSignInAlt/> Connexion
                 </h1>
                 <p> Accédez à votre compte</p>
             </section>

@@ -36,12 +36,12 @@ export default function Header() {
                     <>
                         <li>
                             <Link to='/login'>
-                                <FaSignInAlt/> Login
+                                <FaSignInAlt/> Connexion
                             </Link>
                         </li>
                         <li>
                             <Link to='/register'>
-                                <FaUser/> Register
+                                <FaUser/> Inscription
                             </Link>
                         </li>
                     </>)

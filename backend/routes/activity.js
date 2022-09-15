@@ -18,10 +18,11 @@ const upload = multer({ storage: storage })
 
 router.post('/', auth, upload.single('imageURL'), activityCtrl.createActivity);
 router.get('/',  activityCtrl.findAllActivities);
-router.delete('/:id', activityCtrl.deleteActivity);
+router.delete('/:id', activityCtrl.deleteActivity); //supprimer une activité
 router.get('/one/:id', activityCtrl.getOneActivity); // accessible par tous
-router.patch('/:id', activityCtrl.updateActivity);
-router.get('/user/:id', auth, activityCtrl.getUserActivities);
-router.get('/:id', auth, activityCtrl.getUserActivity);
+router.patch('/:id', activityCtrl.updateActivity); //update activity
+router.get('/user/:id', auth, activityCtrl.getUserActivities);// toutes les activité pour user authentifié
+router.get('/:id', activityCtrl.getUserActivity);// une activité pour user authentifié
+// router.get('/:id', auth, activityCtrl.getUserActivity);// une activité pour user authentifié
 
 module.exports = router;

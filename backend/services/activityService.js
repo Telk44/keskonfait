@@ -15,3 +15,4 @@ exports.formatSqlToJsonresponse = (activity) => {
         imageURL: activity.imageURL
     }
 }
+

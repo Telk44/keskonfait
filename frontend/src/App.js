@@ -8,10 +8,11 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login'
 import Account from "./pages/Account"
 import Activities from "./pages/Activities"
-// import ActivityDetail from "./pages/ActivityDetail/ActivityDetail";
+import ActivityOrg from "./pages/ActivityOrg/ActivityOrg";
 import Register from './pages/Register'
 import NewActivity from "./pages/NewActivity"
 import Activity from "./pages/Activity/Activity"
+
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
                     {/*</Route>*/}
                     {/*<Route path='/activity/:id' element={<PrivateRoute />}>*/}
                         <Route path='/activity/:activityId' element={<Activity />} />
-                        {/*<Route path='/activity/one/:activityId' element={<Activity />} />*/}
+                        <Route path='/activity-org/:activityId' element={<ActivityOrg />} />
                     {/*</Route>*/}
                 </Routes>
                 <Footer />

@@ -1,13 +1,11 @@
 import {useEffect, useState} from "react";
 import {toast} from 'react-toastify'
 import {useSelector, useDispatch} from "react-redux"
-import {getActivity, reset} from '../../features/activities/activitySlice'
+import {getActivity} from '../../features/activities/activitySlice'
 import {useParams} from "react-router-dom"
 import BackButton from "../../components/BackButton"
 import Spinner from "../../components/Spinner"
-// import lego from "../../assets/lego.jpg"
 import './Activity.css'
-import ActivityItem from "../../components/ActivityItem";
 
 
 function Activity() {
@@ -66,8 +64,8 @@ function Activity() {
                         {activity.price}
                         <h4>Lieu</h4>
                         Espace Yuzu – 240 Rue de la Croix Nivert, 44000 Nantes
-                        <h4>Organisateur</h4>
-                        Playwell
+                        <h4 >Organisateur</h4>
+                        <p className='activity-user'>{activity.user}</p>
                         <h4>Contact</h4>
                         <p>{activity.phone} </p>
                         <p>{activity.bookingEmail}</p>
@@ -76,7 +74,8 @@ function Activity() {
 
 
             </div>
-            <BackButton url='/activities'/>
+
+            <BackButton url='/'/>
         </>
     )
 }

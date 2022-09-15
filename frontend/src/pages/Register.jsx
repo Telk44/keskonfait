@@ -68,7 +68,7 @@ export default function Register() {
         <>
             <section className="heading">
                 <h1>
-                    <FaUser/> S'inscrire
+                    <FaUser/> Inscription
                 </h1>
                 <p> Créer un compte</p>
             </section>
@@ -106,3 +106,4 @@ export default function Register() {
         </>
     )
 }
+

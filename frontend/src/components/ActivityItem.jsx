@@ -8,7 +8,7 @@ function ActivityItem({activity}) {
         <div className='activity'>
             <div>{activity.title}</div>
             <div>{new Date(activity.createdAt).toLocaleString('fr-FR')}</div>
-            <Link to={`/activity/${activity.id}`} className='btn btn-reverse btn-sm'>Voir</Link>
+            <Link to={`/activity-org/${activity.id}`} className='btn btn-reverse btn-sm'>Voir</Link>
             <Link to={`/activity/${activity.id}`} ><FaPencilAlt /></Link>
             <Link to={`/activity/${activity.id}`} ><FaTrashAlt /></Link>
         </div>

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 function ActivityTeaser({activity}) {
     return (
         <>
-            <Link to={`/activity/one/${activity.id}`} className="activityTeaser Teaser">
+            <Link to={`activity/${activity.id}`} className="activityTeaser Teaser">
                 <div className="activityTeaser-type Type ">
                     {activity.category}
                 </div>

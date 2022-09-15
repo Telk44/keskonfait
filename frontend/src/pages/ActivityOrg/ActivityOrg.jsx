@@ -1,15 +1,17 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {toast} from 'react-toastify'
 import {useSelector, useDispatch} from "react-redux"
-import {getOneActivity} from '../../features/activities/activitySlice'
+import {getActivity} from '../../features/activities/activitySlice'
 import {useParams} from "react-router-dom"
 import BackButton from "../../components/BackButton"
 import Spinner from "../../components/Spinner"
 import '../Activity/Activity.css'
 
-function ActivityDetail() {
-    const {activity, isLoading, isError, message} = useSelector((state) => state.activities)
 
+function ActivityOrg() {
+    const {activity, isLoading, isSuccess, isError, message} = useSelector((state) => state.activities)
+
+    const params = useParams()
     const dispatch = useDispatch()
     const {activityId} = useParams() //activityId from the url
     console.log(activityId, "activityId")
@@ -18,7 +20,7 @@ function ActivityDetail() {
         if (isError) {
             toast.error(message)
         }
-        dispatch(getOneActivity(activityId))
+        dispatch(getActivity(activityId))
     }, [isError, message, activityId]);
 
     if (isLoading) {
@@ -26,7 +28,7 @@ function ActivityDetail() {
     }
 
     if (isError) {
-        return <h3>Quelque chose s'est mal passé</h3>
+        return <h3>Quelque chose s'est mal passée</h3>
     }
 
 
@@ -63,7 +65,7 @@ function ActivityDetail() {
                         <h4>Lieu</h4>
                         Espace Yuzu – 240 Rue de la Croix Nivert, 44000 Nantes
                         <h4>Organisateur</h4>
-                        Playwell
+                        {activity.user}
                         <h4>Contact</h4>
                         <p>{activity.phone} </p>
                         <p>{activity.bookingEmail}</p>
@@ -72,9 +74,9 @@ function ActivityDetail() {
 
 
             </div>
-            <BackButton url='/'/>
+            <BackButton url='/activities'/>
         </>
     )
 }
 
-export default ActivityDetail
+export default ActivityOrg

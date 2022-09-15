@@ -6,7 +6,7 @@ const {formatSqlToJsonresponse} = require('../services/activityService')
 const {debug} = require("nodemon/lib/utils");
 
 
-// Création d'une activité(test ok)
+// Création d'une activité
 
 exports.createActivity = (req, res, next) => {
     const file = req.file
@@ -44,7 +44,6 @@ exports.createActivity = (req, res, next) => {
     )
         .then((activity) => res.status(200).json(activity))
         .catch(error => res.status(500).json({error, message: 'oups, ça passe pas! '}))
-
 }
 
 
@@ -99,7 +98,8 @@ exports.getUserActivity = (req, res, next) => {
 
     Activity.findOne(
         {
-            where: {userId: getAuthUserId(req), id: req.params.id},
+            // where: {userId: getAuthUserId(req), id: req.params.id},
+            where: {id: req.params.id},
             include: [
                 {
                     model: User,
