@@ -135,6 +135,7 @@ exports.deleteActivity = (req, res, next) => {
 
 //Modifier une activité
 exports.updateActivity = (req, res, next) => {
+
     Activity.update({
         categoryId: req.body.categoryId,
         title: req.body.title,
@@ -144,14 +145,13 @@ exports.updateActivity = (req, res, next) => {
         price: req.body.price,
         phone: req.body.phone,
         bookingEmail: req.body.bookingEmail,
+
     }, {
         where: {
             id: req.params.id
         }
     })
-        .then(res => res.status(200).json({
-            message: "Activité modifiée"
-        }))
+        .then(() => res.status(200).json({message: 'Activité modifiée'}))
         .catch(error => res.status(500).json({error}));
 }
 
