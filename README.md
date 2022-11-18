@@ -20,6 +20,16 @@ J’ai utilisé les bibliothèques javascript __React JS__ et celles associées 
 gestion des états et la construction d’un store.
 J’ai choisi la technologie React JS car elle permet d’obtenir un code facile à maintenir et à faire évoluer.
 
+Ouvrir le dossier Frontend dans le terminal de votre éditeur puis exécuter la commande :
+
+`npm install`
+
+puis
+
+`npm start`
+
+Ouvrir [http://localhost:3000](http://localhost:3000) pour voir dans votre navigateur.
+
 
 ### Backend
 
@@ -31,5 +41,13 @@ Pour faciliter la gestion des données et des requêtes sur NodeJS/Express, j’
 migration de la base de données a été faite via __Sequelize CLI__.
 Les tests unitaires et fonctionnels sont effectués via la librairie __Jest__.
 
-##Installation
+Ouvrir le dossier Backend dans le terminal de votre éditeur puis exécuter la commande :
+
+`npm install`
+
+Créer un fichier.env dans le dossier backend et y renseigner le token de votre choix via DB_TOKEN=
+
+Puis, se connecter à MariaDB ou MySQl pour créer une base de données. Renseigner son nom et son mot de passe dans le fichier config.json et renseigner le système de gestion de BDD utilisé. Puis exécuter la commande:
+
+`nodemon server`
 
