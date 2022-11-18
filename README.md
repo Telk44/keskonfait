@@ -45,7 +45,7 @@ Ouvrir le dossier Backend dans le terminal de votre éditeur puis exécuter la c
 
 `npm install`
 
-Créer un fichier.env dans le dossier backend et y renseigner le token de votre choix via DB_TOKEN=
+Créer un fichier .env dans le dossier backend et y renseigner le token de votre choix via DB_TOKEN=
 
 Puis, se connecter à MariaDB ou MySQl pour créer une base de données. Renseigner son nom et son mot de passe dans le fichier config.json et renseigner le système de gestion de BDD utilisé. Puis exécuter la commande:
 
